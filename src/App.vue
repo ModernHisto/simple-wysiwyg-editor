@@ -7,7 +7,6 @@ const iframe = ref(null);
 setTimeout(() => {  //Делаем так, что-бы первый клик по документу создавал <p> 
   function firstParagraph() {
     iframe.value.contentDocument.execCommand('formatBlock', false, 'p');
-    console.log("!!!"); 
     iframe.value.contentDocument.removeEventListener('click', firstParagraph);
   };
   iframe.value.contentDocument.addEventListener("click", firstParagraph);
@@ -19,7 +18,7 @@ setTimeout(() => {  //Делаем так, что-бы первый клик п�
     <EditorialControlPanel
     :iframe_prop="iframe"
     />
-    <iframe :src="iframeSrc" ref="iframe" frameborder="0" title="Редактор" height="700" width="100%">
+    <iframe srcdoc='<!DOCTYPE html> <html dir="ltr" lang="ru"> <head> <meta charset="utf-8" /> <title>editorialStaff</title> <style> body { overflow-wrap: break-word; } </style> <script> document.designMode = "on" </script> </head> <body spellcheck="false"> </body> </html>' ref="iframe" frameborder="0" title="Редактор" height="700" width="100%">
       <p>iframe не поддерживается</p>
     </iframe>
 
