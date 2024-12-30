@@ -1,0 +1,47 @@
+:root {
+  background-color: #585858;
+}
+
+body {
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+  width: 1000px;
+  background-color: #a7a7a7;
+}
+
+a {
+  color: #639EFF;
+}
+a:hover {
+  color: #2356a8;
+}
+
+@media (max-width: 1024px) {
+  #app {
+    width: 90%;
+  }
+}
